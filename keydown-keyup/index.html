@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key up and Key down event</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Keyup and Keydown event</h1>
+      </header>
+      <p>Press the Del key to delete everything</p>
+      <input type="text" />
+      <p class="content"></p>
+    </main>
+  </body>
+  <script>
+    const p = document.querySelector(".content");
+    document.querySelector("input").addEventListener("keyup", (ev) => {
+      if (ev.key !== "Backspace" && ev.key !== "Delete")
+        p.textContent += ev.key;
+    });
+    document.querySelector("input").addEventListener("keydown", (ev) => {
+      if (ev.key == "Delete") p.textContent = "";
+    });
+  </script>
+</html>

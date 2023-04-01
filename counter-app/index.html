@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+  </head>
+  <style>
+    .container {
+      border: 5px solid #444;
+      border-style: dashed;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+    }
+    .middle-section {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #user-input {
+      width: 80px;
+    }
+    .bottom-section {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <h1>Counter App</h1>
+        </header>
+        <div class="middle-section">
+          <button class="btn btn--decr">Decrement by 1</button>
+          <label for="user-input"></label>
+          <input type="number" name="user-input" id="user-input" value="0" />
+          <button class="btn btn--incr">Increment by 1</button>
+        </div>
+        <div class="bottom-section">
+          <button class="btn btn--reset">Reset Value</button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
